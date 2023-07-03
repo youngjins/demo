@@ -19,8 +19,6 @@ public class DemoService {
         this.demoDao = demoDao;
     }
     public Map<String, Object> selectList(Map<String, Object> param) throws Exception {
-        Map<String, Object> data = (Map<String, Object>) param.get("data");
-
         HashMap returnMap = new HashMap();
         List<Map<String,Object>> list = demoDao.selectList(param);
         returnMap.put("list", list);

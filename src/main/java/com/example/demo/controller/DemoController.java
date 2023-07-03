@@ -20,8 +20,7 @@ public class DemoController {
 
     @PostMapping(value = "/selectList", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> selectList(@RequestBody Map<String, Object> param) throws Exception {
-        //Map<String, Object> data = (Map<String, Object>) command.get("data");
-        System.out.println("ddddddddddd");
+
         Map<String, Object> result = demoService.selectList(param);
 
         return ResponseEntity.ok().body(result);
